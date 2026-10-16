@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo 'This Ran Automatically'
+                echo 'Can this Run automaticlly pls'
             }
         }
     }
