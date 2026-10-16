@@ -10,4 +10,4 @@ RUN python3.14 -m pip install -r requirements.txt
 
 COPY . .
 
-CMD ["uvicorn", "--host 0.0.0.0", "--port 80", "main:app"]
+CMD ["uvicorn", "--host", "0.0.0.0", "--port", "80", "main:app"]
