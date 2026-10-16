@@ -1,13 +1,15 @@
 pipeline {
     agent any
-    options {
-        // Timeout counter starts AFTER agent is allocated
-        timeout(time: 1, unit: 'SECONDS')
-    }
     stages {
-        stage('Example') {
+        stage('Checking out run conditions') {
             steps {
-                echo 'Can this Run automaticlly pls'
+                sh 'ls ./'
+            }
+        }
+
+        stage('Run Dockerfile') {
+            steps {
+                sh 'sudo docker build -t common:build .'
             }
         }
     }
