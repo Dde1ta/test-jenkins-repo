@@ -7,10 +7,12 @@ node ("ec2"){
         sh 'whoami'
     }
 
-    stage('Printing') {
-            def printed = 0;
-            for(printed; printed < printNumberOfTimes; printed ++) {
-                echo "This is working x ${printed}"
-            }
+    stage('checkout') {
+        checkout scm
     }
+
+    stage('checking checkout') {
+        sh 'ls .'
+    }
+
 }
