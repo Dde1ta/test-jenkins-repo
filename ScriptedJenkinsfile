@@ -1,0 +1,16 @@
+node ("ec2"){
+    def thisIsAVariable = "I am a string"
+    def printNumberOfTimes = 10
+
+    stage('inital system info') {
+        sh "pwd"
+        sh 'whoami'
+    }
+
+    stage('Printing') {
+            def printed = 0;
+            for(printed; printed < printNumberOfTimes; printed ++) {
+                echo "This is working x ${printed}"
+            }
+    }
+}
