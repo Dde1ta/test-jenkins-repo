@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        labels "ec2"
+        label "ec2"
     }
     stages {
         stage('Checking out run conditions') {
